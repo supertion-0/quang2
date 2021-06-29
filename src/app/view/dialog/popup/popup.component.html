@@ -1,0 +1,100 @@
+<!-- <div>
+<mat-dialog-content>
+    <div style="overflow: hidden;">
+                <form #addCustomerTempInfo="ngForm">
+                    
+                    <div class="card-body" style="height: 400px; width: 1000px;">
+                        <div style="text-align: center;">
+                            <label style="color: rgb(0, 214, 36);">Để có thể nhận được hỗ trợ và các hoạt động giảm giá bạn vui lòng nhập các thông tin bên dưới đây</label>
+                        </div>
+                        <div class="form-group ">
+                            <label for="inputTempInfo ">Họ và Tên</label>
+
+                            <input type="text" class="form-control" id=name name="name" ngModel required pattern="^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéếêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳýỵỷỹ\s]+$" #name="ngModel"
+                                [(ngModel)]="customerTempInfoDTO.name">
+                            <span id="errorMessage" style="color: red;" *ngIf="name.errors?.required && name.touched">Họ và tên không được để trống</span>
+                            <span id="errorMessage" style="color: red;" *ngIf="name.errors?.pattern && name.touched">Họ và tên không được để kí tự đặc biệt hoặc
+                        chữ số</span>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="inputTempInfo ">Điện Thoại Di Động:</label>
+
+                            <input type="text" class="form-control" name="phone" required pattern="^((09|03|07|08|05)+([0-9]{8}))$" #phone="ngModel" [(ngModel)]="customerTempInfoDTO.phone">
+                            <span id="errorMessage" style="color: red;" *ngIf="phone.errors?.required && phone.touched">Số điện thoại không được để trống</span>
+                            <span id="errorMessage" style="color: red;" *ngIf="phone.errors?.pattern && phone.touched">Số điện thoại không đúng định dạng và phải đủ 10 số </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tỉnh thành</label>
+                            <input type="text" class="form-control" name="address" [(ngModel)]="customerTempInfoDTO.address">
+                        </div>
+                        <div>
+                            <img src="http://thegioidohoacom.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2019/01/10040448/banner-vtvcabhanoi.vn-15-ngay-vang.png" alt="" style="height: 100px; width: 1000px;">
+                        </div>
+                    </div>
+                </form>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Thoát</button>
+    <button mat-button  type="submit" mat-dialog-close (click)="onSubmit()">Thêm</button>
+</mat-dialog-actions>
+</div>
+ -->
+ <div>
+    <mat-dialog-content>
+        <div style="overflow: hidden;">
+            <mat-tab-group>
+                <form #addEmployeeInfo="ngForm">
+                    <mat-tab label="Nhập thông tin để được tư vấn miễn phí" style="color: rgb(121, 33, 99);">
+                        <div class="row">
+                            <div style="height: 300px; width: 700px;">
+
+                                <!-- <div class="form-group ">
+                                    <label for="exampleInputEmail1 ">Họ Tên</label>
+                                    <input type="text" class="form-control" id=name name="name" ngModel required pattern="^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéếêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳýỵỷỹ\s]+$" #name="ngModel"
+                                        >
+                                    <span id="errorMessagename" style="color: red;" *ngIf="name.errors?.required && name.touched">Họ và tên không được để trống</span>
+                                    <span id="errorMessagename" style="color: red;" *ngIf="name.errors?.pattern && name.touched">Họ và tên không được để kí tự đặc biệt hoặc
+                                chữ số</span>
+                                </div> -->
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1 ">Họ Tên</label>
+                                    <!-- [(ngModel)]="customerTempInfoDTO.name" -->
+                                    <!-- <p style="color: black; ">{{ customerInfo.full_name }}</p> -->
+                                    <input type="text" class="form-control" id=name name="name" ngModel required pattern="^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéếêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳýỵỷỹ\s]+$" #name="ngModel"
+                                    >
+                                    <span id="errorMessagename" style="color: red;" *ngIf="name.errors?.required && name.touched">Họ và tên không được để trống</span>
+                                    <span id="errorMessagename" style="color: red;" *ngIf="name.errors?.pattern && name.touched">Họ và tên không được để kí tự đặc biệt hoặc
+                                chữ số</span>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="inputTempInfo ">Điện Thoại Di Động:</label>
+                                    <input type="text" class="form-control" name="phone" required pattern="^^((09|03|07|08|05)+([0-9]{8}))$">
+                                    <span id="errorMessagename" style="color: red;" *ngIf="address.errors?.required && address.touched">Xin hay nhap so dien thoại cua ban</span>
+                                    <span id="errorMessagename" style="color: red;" *ngIf="address.errors?.pattern && address.touched">Số điện thoại không đúng định dạng và phải đủ 10 số</span>
+                                    <!-- <input type="text" class="form-control" name="phone" required pattern="^((09|03|07|08|05)+([0-9]{8}))$" #phone="ngModel" [(ngModel)]="customerTempInfoDTO.phone">
+                                    <span id="errorMessage" style="color: red;" *ngIf="phone.errors?.required && phone.touched">Số điện thoại không được để trống</span>
+                                    <span id="errorMessage" style="color: red;" *ngIf="phone.errors?.pattern && phone.touched">Số điện thoại không đúng định dạng và phải đủ 10 số </span> -->
+                                </div>
+                                <!-- [(ngModel)]="customerTempInfoDTO.address" -->
+                                <div class="form-group">
+                                    <label>Tỉnh thành</label>
+                                    <input type="text" class="form-control" name="address" ngModel required pattern="^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéếêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀẾỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳýỵỷỹ\s]+$" #address="ngModel">
+                                    <span id="errorMessagename" style="color: red;" *ngIf="address.errors?.required && address.touched">Xin hay dien tinh thanh ban sinh song</span>
+                                    <span id="errorMessagename" style="color: red;" *ngIf="address.errors?.pattern && address.touched">Tinh thanh không được để kí tự đặc biệt hoặc chữ số</span>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    
+                </form>
+            </mat-tab-group>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Hủy</button>
+        <button mat-button [disabled]="addEmployeeInfo.invalid" type="submit" mat-dialog-close (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

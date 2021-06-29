@@ -1,0 +1,76 @@
+<mat-dialog-content class="mat-typography">
+    <form #claimForm="ngForm">
+        <div class="card-body" style="width: 780px;">
+            <div style="text-align: center;">
+                <h2>GỬI YÊU CẦU BỒI THƯỜNG</h2>
+            </div>
+            <div class="form-group">
+                <label>Họ và tên:</label>
+                <input class="form-control" [(ngModel)]="customerClaim.name" #name="ngModel">
+            </div>
+            
+            <div class="form-group">
+                <label>Số điện thoại:</label>
+                <input class="form-control" [(ngModel)]="customerClaim.phone" #phone="ngModel">
+            </div>
+            <div class="form-group">
+                <label>Số CMND:</label>
+                <input class="form-control" [(ngModel)]="customerClaim.id_card" #id_card="ngModel">
+            </div>
+            <div class="form-group">
+                <label>Loại bảo hiểm</label>
+                <select [(ngModel)]="customerClaim.bhstyle" class="form-control" name="bhstyle">
+                    <option *ngFor="let bhstyle of bhstyles" [value]="bhstyle.value">{{bhstyle.viewValue}}</option>
+                </select>
+            </div>
+            
+
+            <!-- <div class="form-group">
+                <label>Giới Tính</label>
+                <select [(ngModel)]="customerInfo.gender" class="form-control" name="gender">
+                    <option *ngFor="let gender of genders" [value]="gender.value">{{gender.viewValue}}
+                    </option>
+                </select>
+            </div> -->
+
+                <div class="custom-upload-div">
+                    <h2>TẢI LÊN CÁC GIẤY TỜ CẦN THIẾT</h2>
+                    <!-- <p *ngFor="let file of selectedFile ; index as i" class="list-file">{{ file.name }} &nbsp;&nbsp;
+                        <span (click)="removeFile(i)" style="padding: 5px;"><i class="fas fa-times" style="color: gray;"></i></span>
+                    </p> -->
+                    <br>
+                <span [innerHTML]="result"></span>
+                    
+                    <input id="file" type="file" (change)="onChangeFile($event)" multiple="multiple"/>
+                    <button (click)="onUpload()" class="form-control">TẢI LÊN</button>
+                </div>
+
+            <!-- <div class="form-group">
+                <input type="file" class="form-control" (change)="save($event)" multiple="multiple">
+                <br>
+                <span [innerHTML]="result"></span>
+            </div> -->
+            <!-- <div class="form-group">
+                <label>Các loại giấy tờ đính kèm</label>
+                <input type="file" class="file-input"
+       (change)="onFileSelected($event)" #fileUpload multiple="multiple">
+
+<div class="file-upload">
+
+   {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn"
+      (click)="fileUpload.click()">
+        <mat-icon>attach_file</mat-icon>
+    </button>
+</div>
+            </div> -->
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Hủy</button>
+    <button mat-button type="submit" mat-dialog-close (click)="onSubmit()">Gui</button>
+</mat-dialog-actions>
+
+
